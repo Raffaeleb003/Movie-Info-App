@@ -9,7 +9,7 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(#1c1917 50%, #ffb92a)
+    background: linear-gradient(#142c47 50%, #ffb92a);
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
     width: 90vw;
     max-width: 37.5em;
     padding: 3em 1.8em;
-    background-color: #1e293b;
+    background-color: #142c47;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -29,21 +29,21 @@ body {
 .search-container {
     display: grid;
     grid-template-columns: 9fr 3fr;
-    gap: 1.2em
+    gap: 1.2em;
 }
 
 .search-container input {
     font-size: 0.9em;
     outline: none;
     border-radius: 0.3em;
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid #a0a0a0;
-    color: #fff;
-    padding: 0.7em
+    color: #142c47;
+    padding: 0.7em;
 }
 
 .search-container input:focus {
-    border-color: #fff;
+    border-color: #ffb92a;
 }
 
 .search-container button {
@@ -53,4 +53,5 @@ body {
     cursor: pointer;
     border: none;
     background-color: #ffb92a;
+    color: #fff;
 }
