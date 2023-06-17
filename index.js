@@ -1,6 +1,7 @@
-let movieNameRef = document.getElementById('movieName');
-let searchBtn = document.getElementById('search-btn')
-let result = document.getElementById('result')
+let movieNameRef = document.getElementById("movie-name");
+let searchBtn = document.getElementById("search-btn");
+let result = document.getElementById("result");
+
 
 let getMovie = () => {
     let movieName = movieNameRef.value;
@@ -10,8 +11,10 @@ let getMovie = () => {
         result.innerHTML = `<h3 class="msg">Please enter a movie name </h3>`;
     }
 
+    //if input isn't empty
     else {
         fetch(url).then((resp) => resp.json()).then((data) => {
+            //if movie exist in database
             if (data.Response == "True") {
                 result.innerHTML = `
                     <div class="info">
@@ -49,5 +52,5 @@ let getMovie = () => {
     }
 };
 
-searchBtn.addEventListener("click", getMovie)
-window.addEventListener("load", getMovie)
+searchBtn.addEventListener("click", getMovie);
+window.addEventListener("load", getMovie);
