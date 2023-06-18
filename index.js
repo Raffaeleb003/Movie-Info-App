@@ -8,7 +8,7 @@ let getMovie = () => {
     let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
 
     if (movieName.length <= 0) {
-        result.innerHTML = `<h3 class="msg">Please enter a movie name </h3>`;
+        result.innerHTML = `<h3 class="msg">To search for a movie, click on the button</h3>`;
     }
 
     //if input isn't empty
