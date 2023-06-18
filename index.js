@@ -5,16 +5,15 @@ let result = document.getElementById("result");
 
 let getMovie = () => {
     let movieName = movieNameRef.value;
+    let key = 'b894a030'
     let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
 
     if (movieName.length <= 0) {
         result.innerHTML = `<h3 class="msg">To search for a movie, click on the button</h3>`;
     }
 
-    //if input isn't empty
     else {
         fetch(url).then((resp) => resp.json()).then((data) => {
-            //if movie exist in database
             if (data.Response == "True") {
                 result.innerHTML = `
                     <div class="info">
